@@ -88,6 +88,11 @@ void printDec(byte *buffer, byte bufferSize) {
    Serial.print(buffer[i], DEC);
  }
 }
-
-
 ```
+## Explicació del codi
+
+La llibreria MFRC522 és la que ens permet utilitzar el sensor de targetes. El primer que fem es declarar els pins de reset i SDA i creem l'objecte del sensor amb aquest valors com a paràmetres. Després al setup inicialitzem la comunicació Serial del sistema i els busos SPI i MFRC522. 
+En el loop el que es fa es revisar si hi han targetes amb la funció PICC_IsNewCardPresent() i treure per pantalla el nom d'aquesta si és que n'hi ha.
+
+
+
